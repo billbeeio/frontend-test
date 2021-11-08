@@ -29,4 +29,4 @@ Feel free to decide how you store the data. For example:
 - Code!
 
 ## Submit your solution
-Send a zip file that contains the source code or the compiled version of the app attached to a mail to your contact at Billbee.
+Send a zip file that contains the source code (not the compiled version) of the app attached to a mail to your contact at Billbee.
