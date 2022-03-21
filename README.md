@@ -3,7 +3,7 @@
 Create a small todo app using Angular and Angular Material.
 
 Priorities:
-- Use pnpm as the package manager,
+- Use [pnpm](https://pnpm.io/) (not npm!) as the package manager,
 - create a lazy loaded `TodoModule` Angular module,
 - use the Angular router,
 - write your code clean.
