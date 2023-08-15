@@ -1,4 +1,4 @@
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 
 @include mat.core();
 
@@ -18,5 +18,23 @@ $beehive-theme: mat.m2-define-light-theme(
 
 @include mat.all-component-themes($beehive-theme);
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+    --mat-toolbar-title-text-font: Roboto, sans-serif;
+    --mat-toolbar-title-text-line-height: 32px;
+    --mat-toolbar-title-text-size: 20px;
+    --mat-toolbar-title-text-tracking: .0125em;
+    --mat-toolbar-title-text-weight: 500;
+
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
