@@ -1,4 +1,4 @@
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 
 @include mat.core();
 
@@ -6,15 +6,35 @@ $beehive-primary: mat.define-palette(mat.$amber-palette);
 $beehive-accent: mat.define-palette(mat.$yellow-palette, A200, A100, A400);
 $beehive-warn: mat.define-palette(mat.$red-palette);
 
-$beehive-theme: mat.define-light-theme((
-  color: (
-    primary: $beehive-primary,
-    accent: $beehive-accent,
-    warn: $beehive-warn,
-  )
-));
+$beehive-theme: mat.define-light-theme(
+    (
+        color: (
+            primary: $beehive-primary,
+            accent: $beehive-accent,
+            warn: $beehive-warn,
+        ),
+    )
+);
 
 @include mat.all-component-themes($beehive-theme);
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+    --mat-toolbar-title-text-font: Roboto, sans-serif;
+    --mat-toolbar-title-text-line-height: 32px;
+    --mat-toolbar-title-text-size: 20px;
+    --mat-toolbar-title-text-tracking: .0125em;
+    --mat-toolbar-title-text-weight: 500;
+
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {MatToolbarModule} from '@angular/material/toolbar';
 import {RouterModule} from '@angular/router';
 
 @Component({
@@ -6,8 +7,6 @@ import {RouterModule} from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, MatToolbarModule],
 })
-export class AppComponent {
-  title = 'beehive';
-}
+export class AppComponent {}
