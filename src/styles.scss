@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$beehive-primary: mat.define-palette(mat.$amber-palette);
+$beehive-accent: mat.define-palette(mat.$yellow-palette, A200, A100, A400);
+$beehive-warn: mat.define-palette(mat.$red-palette);
+
+$beehive-theme: mat.define-light-theme((
+  color: (
+    primary: $beehive-primary,
+    accent: $beehive-accent,
+    warn: $beehive-warn,
+  )
+));
+
+@include mat.all-component-themes($beehive-theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
