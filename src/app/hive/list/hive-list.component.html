@@ -1,3 +1,10 @@
-<div class="wrapper">
+<ng-container *ngIf="bees$ | async as bees; else loading">
+    <button mat-raised-button color="primary" (click)="add(bees)">Hinzufügen</button>
+    <div class="wrapper">
+        <app-bee-card *ngFor="let bee of bees" [name]="bee.name" [amount]="bee.amount"></app-bee-card>
+    </div>
+</ng-container>
 
-</div>
+<ng-template #loading>
+    <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+</ng-template>
